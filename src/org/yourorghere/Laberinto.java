@@ -35,17 +35,7 @@ public class Laberinto
     public ArrayList<Cube> paredesX;
     public ArrayList<Cube> paredesZ;
 
-    public Laberinto(GL gl, float x,
-            float y,
-            float z,
-            float w,
-            float h,
-            float d,
-            float r,
-            float g,
-            float b,
-            float angle
-    )
+    public Laberinto(GL gl, float x, float y, float z, float w, float h, float d, float r, float g, float b)
     {
         this.x = x;
         this.y = y;
@@ -114,24 +104,24 @@ public class Laberinto
         paredesX.add(p3);
 
         paredesZ = new ArrayList<Cube>();
-        paredesX.add(pz1);
-        paredesX.add(pz2);
-        paredesX.add(pz3);
-        paredesX.add(pz4);
-        paredesX.add(pz5);
-        paredesX.add(pz6);
-        paredesX.add(pz7);
-        paredesX.add(p1z);
-        paredesX.add(p2z);
-        paredesX.add(p3z);
-        paredesX.add(p4z);
-        paredesX.add(p5z);
-        paredesX.add(p6z);
-        paredesX.add(p7z);
-        paredesX.add(p8z);
-        paredesX.add(p2);
-        paredesX.add(p4);
-        paredesX.add(p41);
+        paredesZ.add(pz1);
+        paredesZ.add(pz2);
+        paredesZ.add(pz3);
+        paredesZ.add(pz4);
+        paredesZ.add(pz5);
+        paredesZ.add(pz6);
+        paredesZ.add(pz7);
+        paredesZ.add(p1z);
+        paredesZ.add(p2z);
+        paredesZ.add(p3z);
+        paredesZ.add(p4z);
+        paredesZ.add(p5z);
+        paredesZ.add(p6z);
+        paredesZ.add(p7z);
+        paredesZ.add(p8z);
+        paredesZ.add(p2);
+        paredesZ.add(p4);
+        paredesZ.add(p41);
 
     }
 
@@ -145,7 +135,7 @@ public class Laberinto
         {
             v.DrawCube();
         }
-        piso.DrawCube();
+         piso.DrawCube();
     }
 
     public float getX()

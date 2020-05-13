@@ -26,18 +26,9 @@ public class Cube
     public float b; //Azul
     public float angle; //Angulo de rotacion
 
-    public Cube(GL gl, float x,
-            float y,
-            float z,
-            float w,
-            float h,
-            float d,
-            float r,
-            float g,
-            float b,
-            float angle
-    )
+    public Cube(GL gl, float x, float y, float z, float w, float h, float d, float r, float g, float b, float angle)
     {
+        this.gl = gl;
         this.x = x;
         this.y = y;
         this.z = z;
@@ -50,9 +41,10 @@ public class Cube
         this.angle = angle;
     }
 
-    public void DrawCube(float a)
+    public void drawCube(float a)
     {
         gl.glPushMatrix();
+
         gl.glTranslatef(x, y, z); //Trasladamos el eje de puntos al centro
         gl.glRotatef(angle, 0, 1, 0); //
         gl.glTranslatef(-x, -y, -z); //Nos permite volver al origen
@@ -106,12 +98,12 @@ public class Cube
         gl.glEnd();
 
         gl.glPopMatrix();
+
     }
 
     public void DrawCube()
     {
-
-        DrawCube(0);
+        drawCube(0);
     }
 
     public float getAngle()
@@ -132,12 +124,9 @@ public class Cube
         return x;
     }
 
-    /**
-     * @return the y
-     */
-    public float getY()
+    public float getW()
     {
-        return y;
+        return w;
     }
 
     /**
