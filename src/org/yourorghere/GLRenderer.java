@@ -24,6 +24,9 @@ public class GLRenderer implements GLEventListener
 
     public static Laberinto l;
     public static float cx, cy, cz;
+    public float lim_sup_x, lim_sup_z;
+    public float lim_inf_x, lim_inf_z;
+    public static int option; //opcion de camara para poder entrar al laberinto
 
     public void main()
     {
@@ -54,8 +57,8 @@ public class GLRenderer implements GLEventListener
         ventana.setVisible(true);
 
         //Pulsacion de teclas 
-//        Keyboard keylistener = new Keyboard(canvas);
-//        canvas.addKeyListener(keylistener);
+        Keyboard keylistener = new Keyboard(canvas);
+        canvas.addKeyListener(keylistener);
     }
 
     public void init(GLAutoDrawable drawable)
@@ -77,6 +80,11 @@ public class GLRenderer implements GLEventListener
         cx = 1f;
         cy = 10f;
         cz = 0f;
+        option = 1;
+        lim_sup_x = 4f;
+        lim_sup_z = 2.75f;
+        lim_inf_x = -1f;
+        lim_inf_z = -2f;
     }
 
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height)
@@ -108,8 +116,7 @@ public class GLRenderer implements GLEventListener
         gl.glLoadIdentity();
 
         // Move the "drawing cursor" around
-      //  gl.glTranslatef(-1.5f, 0.0f, -6.0f);
-
+        //  gl.glTranslatef(-1.5f, 0.0f, -6.0f);
         glu.gluLookAt(cx, cy, cz, 0f, 0f, 0f, 0f, 1f, 0f);
 
         l.DrawFloor();
