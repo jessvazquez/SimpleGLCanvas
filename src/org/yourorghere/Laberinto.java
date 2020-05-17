@@ -64,46 +64,46 @@ public class Laberinto
             System.exit(1);
         }
 
-        piso = new Cube(gl, x, y, z, w * 4, h / 5, d * 4, 0, 1f, 1f, 1f, floor);
-        p1 = new Cube(gl, x - w * 2f, y + h / 2, z, w / 20, h, d * 4, 0, 1f, 1f, 1f, cerramiento); //Paredes laterales
-        p2 = new Cube(gl, x - 0.5f, y + h / 2, z - d * 2, w * 3, h, d / 20, 0, 1f, 1f, 1f, cerramiento);
-        p3 = new Cube(gl, x + w * 2, y + h / 2, z, w / 20, h, d * 4, 0, 1f, 1f, 1f, cerramiento);
-        p4 = new Cube(gl, x - 1.2f, y + h / 2, z + d * 2, w * 1.6f, h, d / 20, 0, 1f, 1f, 1f, cerramiento);
-        p41 = new Cube(gl, x + 1.2f, y + h / 2, z + d * 2, w * 1.6f, h, d / 20, 0, 1f, 1f, 1f, cerramiento);
+        piso = new Cube(gl, x, y, z, w * 4, h / 5, d * 4, 1f, 1f, 1f, 1f, floor);
+        p1 = new Cube(gl, x - w * 2f, y + h / 2, z, w / 20, h, d * 4, 1f, 1f, 1f, 1f, cerramiento); //Paredes laterales
+        p2 = new Cube(gl, x - 0.5f, y + h / 2, z - d * 2, w * 3, h, d / 20, 1f, 1f, 1f, 1f, cerramiento);
+        p3 = new Cube(gl, x + w * 2, y + h / 2, z, w / 20, h, d * 4, 1f, 1f, 1f, 1f, cerramiento);
+        p4 = new Cube(gl, x - 1.2f, y + h / 2, z + d * 2, w * 1.6f, h, d / 20, 1f, 1f, 1f, 1f, cerramiento);
+        p41 = new Cube(gl, x + 1.2f, y + h / 2, z + d * 2, w * 1.6f, h, d / 20, 1f, 1f, 1f, 1f, cerramiento);
 
         //Paredes Laterales de la parte superior
-        pz1 = new Cube(gl, x - 1.3f, y + h / 2, z + 1.3f, w * 1.4f, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz2 = new Cube(gl, x - 1.3f, y + h / 2, z + 1f, w / 2, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz3 = new Cube(gl, x - 1.3f, y + h / 2, z + 0.5f, w * 0.6f, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz4 = new Cube(gl, x - 1.1f, y + h / 2, z, w + 0.2f, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz5 = new Cube(gl, x - 0.75f, y + h / 2, z - 0.5f, w + 0.5f, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz6 = new Cube(gl, x - 0.6f, y + h / 2, z - 0.8f, w * 0.6f, h, d / 20, 0, 1f, 1f, 0f, paredes);
-        pz7 = new Cube(gl, x - 1.2f, y + h / 2, z - 1f, w * 0.6f, h, d / 20, 0, 1f, 1f, 0f, paredes);
+        pz1 = new Cube(gl, x - 1.3f, y + h / 2, z + 1.3f, w * 1.4f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz2 = new Cube(gl, x - 1.3f, y + h / 2, z + 1f, w / 2, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz3 = new Cube(gl, x - 1.3f, y + h / 2, z + 0.5f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz4 = new Cube(gl, x - 1.1f, y + h / 2, z, w + 0.2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz5 = new Cube(gl, x - 0.75f, y + h / 2, z - 0.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz6 = new Cube(gl, x - 0.6f, y + h / 2, z - 0.8f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        pz7 = new Cube(gl, x - 1.2f, y + h / 2, z - 1f, w * 0.6f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
 
         //Paredes laterales parte inferior
-        p1z = new Cube(gl, x + 1.2f, y + h / 2, z + 1.5f, w + 0.5f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p2z = new Cube(gl, x + 1.5f, y + h / 2, z + 1f, w / 2f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p3z = new Cube(gl, x + 0.75f, y + h / 2, z + 0.25f, w * 1.5f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p4z = new Cube(gl, x + 1.6f, y + h / 2, z - 0.25f, w * 0.8f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p5z = new Cube(gl, x + 0.5f, y + h / 2, z - 0.25f, w * 0.5f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p6z = new Cube(gl, x + 0.5f, y + h / 2, z - 1f, w * 1.5f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p7z = new Cube(gl, x + 0.2f, y + h / 2, z - 1.5f, w * 1.5f, h, d / 20, 0, 1f, 0f, 1f, paredes);
-        p8z = new Cube(gl, x + 1.5f, y + h / 2, z - 1.5f, w / 2f, h, d / 20, 0, 1f, 0f, 1f, paredes);
+        p1z = new Cube(gl, x + 1.2f, y + h / 2, z + 1.5f, w + 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p2z = new Cube(gl, x + 1.5f, y + h / 2, z + 1f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p3z = new Cube(gl, x + 0.75f, y + h / 2, z + 0.25f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p4z = new Cube(gl, x + 1.6f, y + h / 2, z - 0.25f, w * 0.8f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p5z = new Cube(gl, x + 0.5f, y + h / 2, z - 0.25f, w * 0.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p6z = new Cube(gl, x + 0.5f, y + h / 2, z - 1f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p7z = new Cube(gl, x + 0.2f, y + h / 2, z - 1.5f, w * 1.5f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
+        p8z = new Cube(gl, x + 1.5f, y + h / 2, z - 1.5f, w / 2f, h, d / 20, 1f, 1f, 1f, 1f, paredes);
 
         //Paredes horizontales parte superior
-        px1 = new Cube(gl, x - 0.6f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 0, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
-        px2 = new Cube(gl, x - 1.6f, y + h / 2, z + 0.4f, w / 20f, h, d * 1.2f, 0, 1f, 1f, 1f, paredes);
-        px3 = new Cube(gl, x - 1.5f, y + h / 2, z + 0.8f, w / 20f, h, d * 0.6f, 0, 1f, 1f, 1f, paredes);
-        px4 = new Cube(gl, x - 0.9f, y + h / 2, z - 1.4f, w / 20f, h, d + 0.2f, 0, 1f, 1f, 1f, paredes);
-        px5 = new Cube(gl, x, y + h / 2, z + 0.5f, w / 20f, h, d * 1, 0, 1f, 1f, 1f, paredes);
+        px1 = new Cube(gl, x - 0.6f, y + h / 2, z + 0.6f, w / 20, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
+        px2 = new Cube(gl, x - 1.6f, y + h / 2, z + 0.4f, w / 20f, h, d * 1.2f, 1f, 1f, 1f, 1f, paredes);
+        px3 = new Cube(gl, x - 1.5f, y + h / 2, z + 0.8f, w / 20f, h, d * 0.6f, 1f, 1f, 1f, 1f, paredes);
+        px4 = new Cube(gl, x - 0.9f, y + h / 2, z - 1.4f, w / 20f, h, d + 0.2f, 1f, 1f, 1f, 1f, paredes);
+        px5 = new Cube(gl, x, y + h / 2, z + 0.5f, w / 20f, h, d * 1, 1f, 1f, 1f, 1f, paredes);
 
         //Paredes horizontales parte inferior
-        p1x = new Cube(gl, x + 0.75f, y + h / 2, z + 1.1f, w / 20, h, d * 1.1f, 0, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
-        p2x = new Cube(gl, x + 1.4f, y + h / 2, z + 0.8f, w / 20, h, d / 2, 0, 1f, 1f, 1f, paredes);
-        p3x = new Cube(gl, x + 0.3f, y + h / 2, z - 0.25f, w / 20, h, d / 2, 0, 1f, 1f, 1f, paredes);
-        p4x = new Cube(gl, x + 1f, y + h / 2, z - 0.6f, w / 20, h, d, 0, 1f, 1f, 1f, paredes);
-        p5x = new Cube(gl, x - 0.1f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 0, 1f, 1f, 1f, paredes);
-        p6x = new Cube(gl, x + 1.8f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 0, 1f, 1f, 1f, paredes);
+        p1x = new Cube(gl, x + 0.75f, y + h / 2, z + 1.1f, w / 20, h, d * 1.1f, 1f, 1f, 1f, 1f, paredes);/////////////////////////??????????????????
+        p2x = new Cube(gl, x + 1.4f, y + h / 2, z + 0.8f, w / 20, h, d / 2, 1f, 1f, 1f, 1f, paredes);
+        p3x = new Cube(gl, x + 0.3f, y + h / 2, z - 0.25f, w / 20, h, d / 2, 1f, 1f, 1f, 1f, paredes);
+        p4x = new Cube(gl, x + 1f, y + h / 2, z - 0.6f, w / 20, h, d, 1f, 1f, 1f, 1f, paredes);
+        p5x = new Cube(gl, x - 0.1f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 1f, 1f, 1f, 1f, paredes);
+        p6x = new Cube(gl, x + 1.8f, y + h / 2, z - 1.6f, w / 20, h, d * 0.8f, 1f, 1f, 1f, 1f, paredes);
 
         paredesX = new ArrayList<Cube>();
         paredesX.add(px1);

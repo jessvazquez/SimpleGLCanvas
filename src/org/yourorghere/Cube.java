@@ -44,6 +44,13 @@ public class Cube
         this.cara = cara;
     }
 
+
+
+//    Cube(GL gl, float x, float y, float z, float f, float f0, float f1, int i, float f2, float f3, float f4)
+//    {
+//        
+//    }
+
     public void drawCube(float a)
     {
         gl.glPushMatrix();
@@ -55,19 +62,14 @@ public class Cube
         cara.enable();
         cara.bind();
         gl.glNormal3f(0, 0, 1);
-        gl.glBegin(GL.GL_QUADS);
-
         gl.glBegin(GL.GL_QUADS);//Cara Frontal
         gl.glColor3f(r, g, b);
         gl.glTexCoord2f(0, 0);
         gl.glVertex3f(x - w / 2, y + h / 2, z - d / 2);
-
         gl.glTexCoord2f(1, 0);
         gl.glVertex3f(x - w / 2, y - h / 2, z - d / 2);
-
         gl.glTexCoord2f(1, 1);
         gl.glVertex3f(x + w / 2, y - h / 2, z - d / 2);
-
         gl.glTexCoord2f(0, 1);
         gl.glVertex3f(x + w / 2, y + h / 2, z - d / 2);
         gl.glEnd();
@@ -78,7 +80,6 @@ public class Cube
         gl.glNormal3f(0, 0, -1);
         gl.glBegin(GL.GL_QUADS);//Cara Trasera
         gl.glColor3f(r, g, b);
-
         gl.glTexCoord2f(0, 1);
         gl.glVertex3f(x - w / 2, y + h / 2, z + d / 2);
         gl.glTexCoord2f(0, 0);
